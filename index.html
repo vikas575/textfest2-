@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PawPilot — AI Pet Sitter</title>
+  <meta name="description" content="PawPilot is an AI pet sitter that watches, learns, and cares for your pet in real-time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- GSAP core for Task 2 animations -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+  <!-- Your animation logic -->
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header aria-label="Primary">
+    <nav class="nav">
+      <a class="brand" href="#" aria-label="PawPilot home">PawPilot</a>
+      <div class="nav-cta">
+        <a class="link" href="#how-it-works">How it works</a>
+        <a class="btn" href="#join">Join beta</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section (Task 1) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h1 id="hero-title" class="glitch" aria-label="Your pet. Supervised by AI.">
+          <span aria-hidden="true">Your pet. Supervised by AI.</span>
+          <span aria-hidden="true">Your pet. Supervised by AI.</span>
+          <span aria-hidden="true">Your pet. Supervised by AI.</span>
+        </h1>
+
+        <p class="lede">
+          PawPilot watches, learns, and cares in real‑time — proactive alerts, routine coaching, and playful engagement while you’re away.
+        </p>
+
+        <div class="cta">
+          <a id="join" class="btn primary" href="https://example.com/signup" rel="nofollow">Get early access</a>
+          <a class="btn ghost" href="#how-it-works">See how</a>
+        </div>
+
+        <ul class="badges" aria-label="Highlights">
+          <li>24/7 smart monitoring</li>
+          <li>Behavior insights</li>
+          <li>Vet‑guided care tips</li>
+        </ul>
+      </div>
+
+      <div class="orb" aria-hidden="true"></div>
+    </section>
+
+    <!-- Hidden anchor target (still one-page visually) -->
+    <section id="how-it-works" class="sr-only" aria-hidden="true" tabindex="-1">
+      PawPilot uses on‑device models to detect activity patterns and trigger helpful nudges.
+    </section>
+
+    <!-- Additional sections for Task 2 scroll reveals -->
+    <section class="section reveal" aria-labelledby="why-title">
+      <div class="container">
+        <h2 id="why-title">Why PawPilot?</h2>
+        <p>Real‑time monitoring, behavior insights, and gentle nudges that keep pets happy.</p>
+      </div>
+    </section>
+
+    <section class="section reveal" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title">Features</h2>
+        <ul>
+          <li>Smart routines</li>
+          <li>Activity journaling</li>
+          <li>Vet‑guided suggestions</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section reveal" aria-labelledby="trust-title">
+      <div class="container">
+        <h2 id="trust-title">Trusted & Private</h2>
+        <p>On‑device processing and encrypted sync keep your data in safe paws.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> PawPilot Labs</small>
+  </footer>
+
+  <script>
+    // Enhancement: current year in footer
+    document.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('year');
+      if (el) el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
