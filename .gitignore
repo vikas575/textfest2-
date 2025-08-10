@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel / Netlify
+.vercel
+.netlify
+
+# Logs / builds
+*.log
+dist/
+build/
+
+# Node (if ever added)
+node_modules/
